@@ -2,7 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 
 # ✅ 配置 API Key（建议从 secrets 或环境变量中安全加载）
-genai.configure(api_key="AIzaSyDFFxZkwlyPQfynSoJTm4XNi3IVS7J14wU")
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 model = genai.GenerativeModel("gemini-2.5-flash")
 
 # ✅ 定义助手函数
